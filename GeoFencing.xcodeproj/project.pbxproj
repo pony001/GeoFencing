@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB7D79691A1E04160027EA3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7D79681A1E04160027EA3D /* main.m */; };
+		AB7D796C1A1E04160027EA3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7D796B1A1E04160027EA3D /* AppDelegate.m */; };
+		AB7D796F1A1E04160027EA3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7D796E1A1E04160027EA3D /* ViewController.m */; };
+		AB7D79721A1E04160027EA3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7D79701A1E04160027EA3D /* Main.storyboard */; };
+		AB7D79741A1E04160027EA3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB7D79731A1E04160027EA3D /* Images.xcassets */; };
+		AB7D79771A1E04160027EA3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB7D79751A1E04160027EA3D /* LaunchScreen.xib */; };
+		AB7D79831A1E04160027EA3D /* GeoFencingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7D79821A1E04160027EA3D /* GeoFencingTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB7D797D1A1E04160027EA3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB7D795B1A1E04160027EA3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB7D79621A1E04160027EA3D;
+			remoteInfo = GeoFencing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB7D79631A1E04160027EA3D /* GeoFencing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoFencing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB7D79671A1E04160027EA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB7D79681A1E04160027EA3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB7D796A1A1E04160027EA3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AB7D796B1A1E04160027EA3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AB7D796D1A1E04160027EA3D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AB7D796E1A1E04160027EA3D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AB7D79711A1E04160027EA3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB7D79731A1E04160027EA3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AB7D79761A1E04160027EA3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AB7D797C1A1E04160027EA3D /* GeoFencingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoFencingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB7D79811A1E04160027EA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB7D79821A1E04160027EA3D /* GeoFencingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoFencingTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB7D79601A1E04160027EA3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB7D79791A1E04160027EA3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB7D795A1A1E04160027EA3D = {
+			isa = PBXGroup;
+			children = (
+				AB7D79651A1E04160027EA3D /* GeoFencing */,
+				AB7D797F1A1E04160027EA3D /* GeoFencingTests */,
+				AB7D79641A1E04160027EA3D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB7D79641A1E04160027EA3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D79631A1E04160027EA3D /* GeoFencing.app */,
+				AB7D797C1A1E04160027EA3D /* GeoFencingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB7D79651A1E04160027EA3D /* GeoFencing */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D796A1A1E04160027EA3D /* AppDelegate.h */,
+				AB7D796B1A1E04160027EA3D /* AppDelegate.m */,
+				AB7D796D1A1E04160027EA3D /* ViewController.h */,
+				AB7D796E1A1E04160027EA3D /* ViewController.m */,
+				AB7D79701A1E04160027EA3D /* Main.storyboard */,
+				AB7D79731A1E04160027EA3D /* Images.xcassets */,
+				AB7D79751A1E04160027EA3D /* LaunchScreen.xib */,
+				AB7D79661A1E04160027EA3D /* Supporting Files */,
+			);
+			path = GeoFencing;
+			sourceTree = "<group>";
+		};
+		AB7D79661A1E04160027EA3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D79671A1E04160027EA3D /* Info.plist */,
+				AB7D79681A1E04160027EA3D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB7D797F1A1E04160027EA3D /* GeoFencingTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D79821A1E04160027EA3D /* GeoFencingTests.m */,
+				AB7D79801A1E04160027EA3D /* Supporting Files */,
+			);
+			path = GeoFencingTests;
+			sourceTree = "<group>";
+		};
+		AB7D79801A1E04160027EA3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D79811A1E04160027EA3D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB7D79621A1E04160027EA3D /* GeoFencing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB7D79861A1E04160027EA3D /* Build configuration list for PBXNativeTarget "GeoFencing" */;
+			buildPhases = (
+				AB7D795F1A1E04160027EA3D /* Sources */,
+				AB7D79601A1E04160027EA3D /* Frameworks */,
+				AB7D79611A1E04160027EA3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoFencing;
+			productName = GeoFencing;
+			productReference = AB7D79631A1E04160027EA3D /* GeoFencing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB7D797B1A1E04160027EA3D /* GeoFencingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB7D79891A1E04160027EA3D /* Build configuration list for PBXNativeTarget "GeoFencingTests" */;
+			buildPhases = (
+				AB7D79781A1E04160027EA3D /* Sources */,
+				AB7D79791A1E04160027EA3D /* Frameworks */,
+				AB7D797A1A1E04160027EA3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB7D797E1A1E04160027EA3D /* PBXTargetDependency */,
+			);
+			name = GeoFencingTests;
+			productName = GeoFencingTests;
+			productReference = AB7D797C1A1E04160027EA3D /* GeoFencingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB7D795B1A1E04160027EA3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Lei;
+				TargetAttributes = {
+					AB7D79621A1E04160027EA3D = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					AB7D797B1A1E04160027EA3D = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = AB7D79621A1E04160027EA3D;
+					};
+				};
+			};
+			buildConfigurationList = AB7D795E1A1E04160027EA3D /* Build configuration list for PBXProject "GeoFencing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB7D795A1A1E04160027EA3D;
+			productRefGroup = AB7D79641A1E04160027EA3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB7D79621A1E04160027EA3D /* GeoFencing */,
+				AB7D797B1A1E04160027EA3D /* GeoFencingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB7D79611A1E04160027EA3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB7D79721A1E04160027EA3D /* Main.storyboard in Resources */,
+				AB7D79771A1E04160027EA3D /* LaunchScreen.xib in Resources */,
+				AB7D79741A1E04160027EA3D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB7D797A1A1E04160027EA3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB7D795F1A1E04160027EA3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB7D796F1A1E04160027EA3D /* ViewController.m in Sources */,
+				AB7D796C1A1E04160027EA3D /* AppDelegate.m in Sources */,
+				AB7D79691A1E04160027EA3D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB7D79781A1E04160027EA3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB7D79831A1E04160027EA3D /* GeoFencingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB7D797E1A1E04160027EA3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB7D79621A1E04160027EA3D /* GeoFencing */;
+			targetProxy = AB7D797D1A1E04160027EA3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AB7D79701A1E04160027EA3D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB7D79711A1E04160027EA3D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AB7D79751A1E04160027EA3D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB7D79761A1E04160027EA3D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB7D79841A1E04160027EA3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AB7D79851A1E04160027EA3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB7D79871A1E04160027EA3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GeoFencing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AB7D79881A1E04160027EA3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GeoFencing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AB7D798A1A1E04160027EA3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GeoFencingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoFencing.app/GeoFencing";
+			};
+			name = Debug;
+		};
+		AB7D798B1A1E04160027EA3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GeoFencingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoFencing.app/GeoFencing";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB7D795E1A1E04160027EA3D /* Build configuration list for PBXProject "GeoFencing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB7D79841A1E04160027EA3D /* Debug */,
+				AB7D79851A1E04160027EA3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB7D79861A1E04160027EA3D /* Build configuration list for PBXNativeTarget "GeoFencing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB7D79871A1E04160027EA3D /* Debug */,
+				AB7D79881A1E04160027EA3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AB7D79891A1E04160027EA3D /* Build configuration list for PBXNativeTarget "GeoFencingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB7D798A1A1E04160027EA3D /* Debug */,
+				AB7D798B1A1E04160027EA3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB7D795B1A1E04160027EA3D /* Project object */;
+}
