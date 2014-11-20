@@ -81,13 +81,10 @@
 		AB7D79651A1E04160027EA3D /* GeoFencing */ = {
 			isa = PBXGroup;
 			children = (
-				AB7D796A1A1E04160027EA3D /* AppDelegate.h */,
-				AB7D796B1A1E04160027EA3D /* AppDelegate.m */,
-				AB7D796D1A1E04160027EA3D /* ViewController.h */,
-				AB7D796E1A1E04160027EA3D /* ViewController.m */,
-				AB7D79701A1E04160027EA3D /* Main.storyboard */,
+				AB7D798C1A1E04270027EA3D /* Model */,
+				AB7D798D1A1E04300027EA3D /* View */,
+				AB7D798E1A1E04480027EA3D /* Controller */,
 				AB7D79731A1E04160027EA3D /* Images.xcassets */,
-				AB7D79751A1E04160027EA3D /* LaunchScreen.xib */,
 				AB7D79661A1E04160027EA3D /* Supporting Files */,
 			);
 			path = GeoFencing;
@@ -117,6 +114,33 @@
 				AB7D79811A1E04160027EA3D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB7D798C1A1E04270027EA3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AB7D798D1A1E04300027EA3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D79701A1E04160027EA3D /* Main.storyboard */,
+				AB7D79751A1E04160027EA3D /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AB7D798E1A1E04480027EA3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB7D796A1A1E04160027EA3D /* AppDelegate.h */,
+				AB7D796B1A1E04160027EA3D /* AppDelegate.m */,
+				AB7D796D1A1E04160027EA3D /* ViewController.h */,
+				AB7D796E1A1E04160027EA3D /* ViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
