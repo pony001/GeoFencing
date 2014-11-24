@@ -8,8 +8,10 @@
 
 #import "LocationManager.h"
 #import "SLLocation.h"
+#import "CLCircularRegion+Distance.h"
 #import <Realm.h>
 #import <CoreLocation/CoreLocation.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 @interface LocationManager() <CLLocationManagerDelegate>
 
@@ -17,6 +19,8 @@
 @property (strong, nonatomic) RLMRealm *realm;
 
 @end
+
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 @implementation LocationManager
 
@@ -46,7 +50,7 @@
     }
 }
 
-- (CLRegion *)regionFromLocations:(NSArray *)locations radius:(CLLocationDistance)radius {
+- (CLCircularRegion *)regionFromLocations:(NSArray *)locations radius:(CLLocationDistance)radius {
     CLLocation *center = [self centerLocationInLocations:locations];
     CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:center.coordinate
                                                                  radius:radius
@@ -70,7 +74,7 @@
             totalDistance += [location distanceFromLocation:locations[j]];
         }
         
-        if(totalDistance < minTotalDistance) {
+        if(totalDistance <= minTotalDistance) {
             result = location;
             minTotalDistance = totalDistance;
         }
@@ -78,8 +82,22 @@
     return result;
 }
 
+- (BOOL)hasMonitoredRegionsWithin:(CLLocationDistance)radius
+                       fromRegion:(CLCircularRegion *)region {
+    NSSet *monitoredRegions = [_clManager monitoredRegions];
+    for (CLCircularRegion *monitoredRegion in monitoredRegions) {
+        if ([region distanceFromRegion:monitoredRegion] < radius) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 #pragma mark - CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    
+    DDLogInfo(@"location manager didUpdateLocation - count:%lu", (unsigned long)locations.count);
+    
     NSMutableArray *sllocationArray = [[NSMutableArray alloc] init];
     for (CLLocation *location in locations) {
         SLLocation *sllocation = [[SLLocation alloc] initWithCLLocation:location];
@@ -90,7 +108,12 @@
     [_realm addObjects:sllocationArray];
     [_realm commitWriteTransaction];
     
-    [_clManager startMonitoringForRegion:[self regionFromLocations:locations radius:50.0]];
+    CLCircularRegion *region = [self regionFromLocations:locations radius:50.0];
+    if (![self hasMonitoredRegionsWithin:50.0 fromRegion:region]) {
+        DDLogInfo(@"start monitoring for region: %@", region);
+        [_clManager startMonitoringForRegion:region];
+    }
+    
     [_clManager stopUpdatingLocation];
 }
 
@@ -101,6 +124,7 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
+    DDLogInfo(@"locationManager didExitRegion: %@", region);
     [_clManager stopMonitoringForRegion:region];
     [_clManager startUpdatingLocation];
 }

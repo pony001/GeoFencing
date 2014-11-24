@@ -19,6 +19,8 @@
 		AB7D79931A1E115A0027EA3D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7D79921A1E115A0027EA3D /* CoreLocation.framework */; };
 		AB7D79951A1E11620027EA3D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7D79941A1E11620027EA3D /* MapKit.framework */; };
 		AB7D79981A1E12360027EA3D /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7D79971A1E12360027EA3D /* LocationManager.m */; };
+		AB7D799D1A1E1E700027EA3D /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7D799C1A1E1E700027EA3D /* Logger.m */; };
+		ABB5B3A41A235E2A00DDCAA5 /* CLCircularRegion+Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB5B3A31A235E2A00DDCAA5 /* CLCircularRegion+Distance.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		AB7D79941A1E11620027EA3D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AB7D79961A1E12360027EA3D /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		AB7D79971A1E12360027EA3D /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		AB7D799B1A1E1E700027EA3D /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		AB7D799C1A1E1E700027EA3D /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+		ABB5B3A21A235E2A00DDCAA5 /* CLCircularRegion+Distance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLCircularRegion+Distance.h"; sourceTree = "<group>"; };
+		ABB5B3A31A235E2A00DDCAA5 /* CLCircularRegion+Distance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLCircularRegion+Distance.m"; sourceTree = "<group>"; };
 		C148D9CB5F551681FF8CCFDB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +158,10 @@
 				AB7D79901A1E11020027EA3D /* SLLocation.m */,
 				AB7D79961A1E12360027EA3D /* LocationManager.h */,
 				AB7D79971A1E12360027EA3D /* LocationManager.m */,
+				AB7D799B1A1E1E700027EA3D /* Logger.h */,
+				AB7D799C1A1E1E700027EA3D /* Logger.m */,
+				ABB5B3A21A235E2A00DDCAA5 /* CLCircularRegion+Distance.h */,
+				ABB5B3A31A235E2A00DDCAA5 /* CLCircularRegion+Distance.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -325,7 +335,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB5B3A41A235E2A00DDCAA5 /* CLCircularRegion+Distance.m in Sources */,
 				AB7D796F1A1E04160027EA3D /* ViewController.m in Sources */,
+				AB7D799D1A1E1E700027EA3D /* Logger.m in Sources */,
 				AB7D79981A1E12360027EA3D /* LocationManager.m in Sources */,
 				AB7D796C1A1E04160027EA3D /* AppDelegate.m in Sources */,
 				AB7D79691A1E04160027EA3D /* main.m in Sources */,
