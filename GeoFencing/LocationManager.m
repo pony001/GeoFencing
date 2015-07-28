@@ -104,6 +104,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
         [sllocationArray addObject:sllocation];
     }
     
+    // write locations to Realm
     [_realm beginWriteTransaction];
     [_realm addObjects:sllocationArray];
     [_realm commitWriteTransaction];
