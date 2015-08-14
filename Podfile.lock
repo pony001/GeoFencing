@@ -1,14 +1,14 @@
 PODS:
   - CocoaLumberjack (2.0.0-beta4):
-    - CocoaLumberjack/Default
-    - CocoaLumberjack/Extensions
+    - CocoaLumberjack/Default (= 2.0.0-beta4)
+    - CocoaLumberjack/Extensions (= 2.0.0-beta4)
   - CocoaLumberjack/Core (2.0.0-beta4)
   - CocoaLumberjack/Default (2.0.0-beta4):
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.0.0-beta4):
     - CocoaLumberjack/Default
   - Realm (0.87.4):
-    - Realm/Headers
+    - Realm/Headers (= 0.87.4)
   - Realm/Headers (0.87.4)
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ DEPENDENCIES:
   - Realm (~> 0.87.4)
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: 24153b24b17d853d7182b22b128971fb98e8cb18
-  Realm: 17d0d9c94b38d15223fa3e806ead0e0562765e46
+  CocoaLumberjack: 44fc4ab64ee7cb9703df5de6d5012cf917775938
+  Realm: ead712133879619b1b3bb4ad9efbcb3b61076dbf
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.37.1

@@ -10,11 +10,14 @@
 #import "SLLocation.h"
 #import <MapKit/MapKit.h>
 #import <Realm.h>
+#import "LocationManager.h"
 
 @interface ViewController () <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) RLMResults *locationArray;
+
+- (IBAction)tapRemove:(id)sender;
 
 @end
 
@@ -31,6 +34,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)tapRemove:(id)sender {
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    [realm transactionWithBlock:^{
+        [realm deleteAllObjects];
+    }];
+    
+   [[LocationManager sharedLocationManager] startTracking];
+    
+    [self drawMap];
+}
+
 - (IBAction)RefreshPressed:(id)sender {
     [self drawMap];
 }
@@ -38,6 +52,7 @@
 - (void)drawMap {
     _locationArray = [SLLocation allObjects];
     [self drawPolyLine];
+    [self drawCircle];
     [self centerMap];
 }
 
@@ -55,6 +70,26 @@
     
     MKPolyline *line = [MKPolyline polylineWithPoints:points count:count];
     [_mapView addOverlay:line];
+}
+
+- (void)drawCircle
+{
+    NSInteger count = _locationArray.count;
+    if (count < 1) {
+        return;
+    }
+    
+    for (int i = 0; i < count; i++) {
+        SLLocation *location = [_locationArray objectAtIndex:i];
+        CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(location.latitude, location.longitude);
+        CLLocationDistance radius = location.horizontalAccuracy;
+        MKCircle *circle = [MKCircle circleWithCenterCoordinate:coord radius:radius];
+        circle.title = [NSString stringWithFormat:@"%d",i++];
+
+        NSLog(@"radius:%f", radius);
+        
+        [_mapView addOverlay:circle];
+    }
 }
 
 - (void)centerMap
@@ -122,6 +157,24 @@
         routeRenderer.strokeColor = [UIColor blueColor];
         routeRenderer.lineWidth = 2.0;
         return routeRenderer;
+    } else if ([overlay isKindOfClass:[MKCircle class]]){
+       
+        MKCircleRenderer *circleRenderer = [[MKCircleRenderer alloc] initWithCircle:overlay];
+        
+       
+        circleRenderer.strokeColor = [UIColor redColor];
+        circleRenderer.alpha = 0.04;
+        circleRenderer.lineWidth = 1.;
+//
+//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, -40, 400, 100)];
+//        label.backgroundColor = [UIColor clearColor];
+//        label.text =  ((MKCircle*)overlay).title;
+//        label.textColor = [UIColor redColor];
+//        label.font = [UIFont systemFontOfSize:100];
+//        [circleRenderer addSubview:label];
+//        [circleRenderer setClipsToBounds:NO];
+        
+        return circleRenderer;
     }
     return nil;
 }

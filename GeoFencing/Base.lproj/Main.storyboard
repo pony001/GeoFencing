@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -29,14 +29,25 @@
                                     <action selector="RefreshPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uYE-O7-e4s"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JS-ze-vBW">
+                                <rect key="frame" x="429" y="44" width="51" height="30"/>
+                                <state key="normal" title="remove">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapRemove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="csT-jb-n0h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DT0-xV-c10" secondAttribute="bottom" id="2tz-1v-b4X"/>
                             <constraint firstItem="DT0-xV-c10" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="8cR-tW-8gC"/>
                             <constraint firstItem="0Sf-lB-J70" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="24" id="SOv-ZX-9ZB"/>
+                            <constraint firstItem="8JS-ze-vBW" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="24" id="ZZi-N2-aBB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Sf-lB-J70" secondAttribute="trailing" constant="24" id="Zxu-XY-5Mm"/>
                             <constraint firstItem="DT0-xV-c10" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="baz-5I-ZFh"/>
+                            <constraint firstItem="0Sf-lB-J70" firstAttribute="leading" secondItem="8JS-ze-vBW" secondAttribute="trailing" constant="27" id="feB-b0-dzv"/>
                             <constraint firstAttribute="trailing" secondItem="DT0-xV-c10" secondAttribute="trailing" id="rOX-A4-3cf"/>
                         </constraints>
                     </view>

@@ -20,7 +20,7 @@
 
 @end
 
-static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+static const DDLogLevel ddLogLevel = DDLogLevelAll;
 
 @implementation LocationManager
 
@@ -62,6 +62,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     if (locations.count == 1) {
         return locations[0];
     }
+    DDLogInfo(@"locations size:%d", locations.count);
+    DDLogInfo(@"locations : %@", locations);
     
     CLLocation *result = [[CLLocation alloc] init];
     
@@ -93,10 +95,27 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     return NO;
 }
 
+#pragma mark - CLLocationManagerAuthor
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    if (status == kCLAuthorizationStatusAuthorizedAlways) {
+        [_clManager startUpdatingLocation];
+    }
+}
+
 #pragma mark - CLLocationManagerDelegate
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     
-    DDLogInfo(@"location manager didUpdateLocation - count:%lu", (unsigned long)locations.count);
+    DDLogInfo(@"locationManager didUpdateLocation - count:%lu", (unsigned long)locations.count);
+
+    CLCircularRegion *region = [self regionFromLocations:locations radius:50.0];
+    if (![self hasMonitoredRegionsWithin:50.0 fromRegion:region]) {
+        DDLogInfo(@"locationManager for region: %@", region);
+        [_clManager startMonitoringForRegion:region];
+    }
+    
+    [_clManager stopUpdatingLocation];
     
     NSMutableArray *sllocationArray = [[NSMutableArray alloc] init];
     for (CLLocation *location in locations) {
@@ -108,26 +127,22 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     [_realm beginWriteTransaction];
     [_realm addObjects:sllocationArray];
     [_realm commitWriteTransaction];
-    
-    CLCircularRegion *region = [self regionFromLocations:locations radius:50.0];
-    if (![self hasMonitoredRegionsWithin:50.0 fromRegion:region]) {
-        DDLogInfo(@"start monitoring for region: %@", region);
-        [_clManager startMonitoringForRegion:region];
-    }
-    
-    [_clManager stopUpdatingLocation];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
-    if (status == kCLAuthorizationStatusAuthorizedAlways) {
-        [_clManager startUpdatingLocation];
-    }
-}
+#pragma mark - Monitoring For Region Delegate
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
     DDLogInfo(@"locationManager didExitRegion: %@", region);
     [_clManager stopMonitoringForRegion:region];
     [_clManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
+    DDLogInfo(@"locationManager didStartMonitoringForRegion");
+}
+
+- (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error {
+    DDLogInfo(@"locationManager monitoringDidFailForRegion");
 }
 
 @end
